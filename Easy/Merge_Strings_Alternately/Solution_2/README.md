@@ -22,19 +22,9 @@ The code starts by calculating the lengths of the input strings `word1` and `wor
 
 After the alternating characters are appended, two additional loops handle the remaining characters from `word1` and `word2`, if any. These loops ensure that any extra characters from either string are appended to the end of the merged string.
 
-## How to Use
-
-To use this solution, you can follow these steps:
-
-1. Make sure you have a C++ compiler installed on your system.
-2. Copy the provided code from the repository's main file.
-3. Create a new C++ source file in your development environment.
-4. Paste the code into the new file.
-5. Build and run the program to see the merged result of the input strings.
-
 ## Time Complexity
 
-The time complexity of this solution is O(max(N, M)), where N is the length of `word1` and M is the length of `word2`. This is because the code iterates through the characters of both input strings once.
+The time complexity of this solution is **O(max(N, M))**, where N is the length of `word1` and M is the length of `word2`. This is because the code iterates through the characters of both input strings once.
 
 ## Space Complexity
 

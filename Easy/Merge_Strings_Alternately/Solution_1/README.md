@@ -22,7 +22,7 @@ The given code defines a class `Solution` with a member function `mergeAlternate
 
 ## Time Complexity
 
-The time complexity of this solution is O(max(N, M)), where N is the length of `word1` and M is the length of `word2`. In the worst case, both strings are of equal length, and the loop will run N (or M) times.
+The time complexity of this solution is **O(max(N, M))**, where N is the length of `word1` and M is the length of `word2`. In the worst case, both strings are of equal length, and the loop will run N (or M) times.
 
 ## Space Complexity
 
