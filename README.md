@@ -1,17 +1,30 @@
-# C++ Coding Solutions
+# C++ Concepts
 
-## [Easy](Easy)
+- The `substr` function is specifically designed for `std::string` objects, not for raw character `arrays (char[])` or containers like `std::vector<char>`.
 
-| Sr. No. | Name                                                                                       | Source                                                                                                                                  |
-| ------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.      | [Merge Sorted Array](Easy/Merge_Sorted_Array/Merge_Sorted_Array.cpp)                       | [Leetcode](https://leetcode.com/problems/merge-sorted-array/)                                                                           |
-| 2.      | [Majority Element](Easy/Majority_Element/Majority_Element.cpp)                             | [Leetcode](https://leetcode.com/problems/majority-element/)                                                                             |
-| 3.      | [Remove Duplicates from Sorted Array](Easy/Remove_Duplicates_from_Sorted_Array)            | [Leetcode](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)                                                          |
-| 4.      | [Palindrome String](Easy/Palindrome_String)                                                | [InterviewBit](https://www.interviewbit.com/problems/palindrome-string/)/[Leetcode](https://leetcode.com/problems/valid-palindrome/)    |
-| 5.      | [Merge Strings Alternately](Easy/Merge_Strings_Alternately)                                | [Leetcode](https://leetcode.com/problems/merge-strings-alternately/description/?envType=study-plan-v2&envId=leetcode-75)                |
-| 6.      | [Greatest Common Divisor of Strings](Easy/Greatest_Common_Divisor_of_Strings)              | [Leetcode](https://leetcode.com/problems/greatest-common-divisor-of-strings/?envType=study-plan-v2&envId=leetcode-75)                   |
-| 7.      | [ Kids With the Greatest Number of Candies](Easy/Kids_With_the_Greatest_Number_of_Candies) | [Leetcode](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/description/?envType=study-plan-v2&envId=leetcode-75) |
+- A `character` array is essentially a contiguous block of memory storing individual characters. You can manipulate it using `pointers` or `indices` but cannot call substr or other string-related methods on it.
 
-## Medium
+- to iterate through char:
 
-## High
+  ```
+  for (int i = 0; i < length; ++i) {
+  result[i] = s[start + i];
+  }
+  ```
+
+- to iterate through vectors
+
+  ```
+  std::vector<char> result(s.begin() + start, s.begin() + start + length);
+  ```
+
+- `s.length()` works only for `std::string`. If s is a character array (char[]) or a `std::vector<char>`, you'll need `sizeof(s)` (for static arrays) or `s.size()` (for vectors).
+
+- In C++, the type of quotation marks used determines whether you're dealing with a character or a string.
+  "" (Double Quotes): Represents a string (e.g., std::string or const char\*).
+
+  - "" (Double Quotes): Represents a string (e.g., std::string or const char\*).
+
+  - ' ' (Single Quotes): Represents a character (e.g., char).
+
+- The operation s[j+1:p] suggests creating a new temporary array for the slice, which requires additional space. Concatenating these slices into a new array (s = ...) violates the in-place requirement, as it creates a new data structure.
